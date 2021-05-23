@@ -12,7 +12,7 @@ use_bpm 135
 # Here, we ramp up from near-zero to half amplitude
 define :pre_intro do
   use_synth :dsaw
-  use_synth_defaults attack_level: 2.5, decay: 0.2, sustain: 0.8, release: 0.2
+  use_synth_defaults attack_level: 2.5, decay: 0.2, sustain: 0.8, release: 0.2, detune: 0.1
   
   d_amp = 0.03125
   amp = d_amp
@@ -40,30 +40,31 @@ end
 
 # Define a function for the repeating bar of percussion
 define :percussion do
-  cymbal = :elec_cymbal, pitch_dis=1, pitch=5, env_curve=5
-  snare  = :sn_zolf, pitch_dis=1, pitch=5, env_curve=5
+  cymbal = :elec_hi_snare, pitch_dis=1, pitch=10, env_curve=5
+  snare  = :sn_zolf, pitch_dis=1, pitch=10, env_curve=5
+  vol=1.75
   
   with_fx :echo, decay: 0.1, pre_amp: 0.2, phase: 0.5 do
     with_fx :gverb do
       with_fx :distortion, mix: 0.6 do
         2.times do
-          sample snare, amp: 0.8
-          sample cymbal, amp: 0.8
+          sample snare, amp: 0.8 * vol
+          sample cymbal, amp: 0.8 * vol
           sleep 0.5
-          sample snare, amp: 0.6
-          sample cymbal, amp: 0.6
+          sample snare, amp: 0.6 * vol
+          sample cymbal, amp: 0.6 * vol
           sleep 0.5
-          sample snare, amp: 0.4
-          sample cymbal, amp: 0.4
+          sample snare, amp: 0.4 * vol
+          sample cymbal, amp: 0.4 * vol
           sleep 0.5
-          sample snare, amp: 0.3
-          sample cymbal, amp: 0.3
+          sample snare, amp: 0.3 * vol
+          sample cymbal, amp: 0.3 * vol
           sleep 0.5
-          sample snare, amp: 0.2
-          sample cymbal, amp: 0.2
+          sample snare, amp: 0.2 * vol
+          sample cymbal, amp: 0.2 * vol
           sleep 1.5
-          sample snare, amp: 0.4
-          sample cymbal, amp: 0.4
+          sample snare, amp: 0.4 * vol
+          sample cymbal, amp: 0.4 * vol
           sleep 0.5
         end
       end
@@ -728,8 +729,9 @@ end
 
 define :outro do
   
-  cymbal = :elec_cymbal, pitch_dis=1, pitch=5, env_curve=5
-  snare  = :sn_zolf, pitch_dis=1, pitch=5, env_curve=5
+  cymbal = :elec_hi_snare, pitch_dis=1, pitch=10, env_curve=5
+  snare  = :sn_zolf, pitch_dis=1, pitch=10, env_curve=5
+  vol = 1.75
   
   use_synth :dsaw
   use_synth_defaults attack_level: 2.5, decay: 0.2, sustain: 0.8, release: 0.2
@@ -749,23 +751,23 @@ define :outro do
     end
     
     in_thread do
-      sample snare, amp: 0.8 * amp
-      sample cymbal, amp: 0.8 * amp
+      sample snare, amp: 0.8 * amp * vol
+      sample cymbal, amp: 0.8 * amp * vol
       sleep 0.5
-      sample snare, amp: 0.6 * amp
-      sample cymbal, amp: 0.6 * amp
+      sample snare, amp: 0.6 * amp * vol
+      sample cymbal, amp: 0.6 * amp * vol
       sleep 0.5
-      sample snare, amp: 0.4 * amp
-      sample cymbal, amp: 0.4 * amp
+      sample snare, amp: 0.4 * amp * vol
+      sample cymbal, amp: 0.4 * amp * vol
       sleep 0.5
-      sample snare, amp: 0.3 * amp
-      sample cymbal, amp: 0.3 * amp
+      sample snare, amp: 0.3 * amp * vol
+      sample cymbal, amp: 0.3 * amp * vol
       sleep 0.5
-      sample snare, amp: 0.2 * amp
-      sample cymbal, amp: 0.2 * amp
+      sample snare, amp: 0.2 * amp * vol
+      sample cymbal, amp: 0.2 * amp * vol
       sleep 1.5
-      sample snare, amp: 0.4 * amp
-      sample cymbal, amp: 0.4 * amp
+      sample snare, amp: 0.4 * amp * vol
+      sample cymbal, amp: 0.4 * amp * vol
       sleep 0.5
       amp = amp + d_amp
     end
