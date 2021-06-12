@@ -318,7 +318,7 @@ with_fx :reverb, mix: 0.2 do
     
     use_bpm bpm
     
-    3.times do
+    2.times do
       left_hand1 0.1 #Intro
     end
     
@@ -344,7 +344,7 @@ with_fx :reverb, mix: 0.2 do
     
     use_bpm bpm
     
-    3.times do
+    2.times do
       right_hand1 0.1 # Rest during intro
     end
     
@@ -380,7 +380,7 @@ in_thread do
   
   use_bpm bpm
   
-  3.times do
+  2.times do
     right_hand1 0.1 # Rest during intro
   end
   
