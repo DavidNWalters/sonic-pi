@@ -41,7 +41,7 @@ end
 # Define a function for the repeating bar of percussion
 define :percussion do
   cymbal = :elec_hi_snare, pitch_dis=1, pitch=10, env_curve=5
-  snare  = :sn_zolf, pitch_dis=1, pitch=10, env_curve=5
+  snare  = :sn_dolf, pitch_dis=1, pitch=10, env_curve=5
   vol=1.75
   
   with_fx :echo, decay: 0.1, pre_amp: 0.2, phase: 0.5 do
@@ -730,7 +730,7 @@ end
 define :outro do
   
   cymbal = :elec_hi_snare, pitch_dis=1, pitch=10, env_curve=5
-  snare  = :sn_zolf, pitch_dis=1, pitch=10, env_curve=5
+  snare  = :sn_dolf, pitch_dis=1, pitch=10, env_curve=5
   vol = 1.75
   
   use_synth :dsaw
