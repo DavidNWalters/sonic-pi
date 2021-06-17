@@ -299,5 +299,189 @@ define :sect5 do
   sleep 8
 end
 
+define :sect6_lh do
+  define :bar76to79_lh do
+    # bar 76-77
+    2.times do
+      plays 'F2', 0.5
+      plays2 'F3', 'A3', 0.5
+      plays 'A2', 0.5
+      plays2 'F3', 'A3', 0.5
+    end
+    
+    # bar 78-79
+    2.times do
+      plays 'C3', 0.5
+      plays3 'E3', 'G3', 'C4', 0.5
+      plays 'G2', 0.5
+      plays3 'E3', 'G3', 'C4', 0.5
+    end
+  end
+  bar76to79_lh
+  
+  # bar 80
+  plays 'G2', 0.5
+  plays3 'F3', 'G3', 'B3', 0.5
+  plays 'B2', 0.5
+  plays3 'F3', 'G3', 'B3', 0.5
+  
+  plays 'G2', 0.5
+  plays3 'F3', 'G3', 'B3', 0.5
+  plays 'D3', 0.5
+  plays3 'F3', 'G3', 'B3', 0.5
+  
+  # bar 82
+  plays3 'Ds3', 'Fs3', 'C4', 0.5
+  plays3 'Ds3', 'Fs3', 'C4', 1
+  plays3 'Ds3', 'Fs3', 'C4', 0.5
+  
+  plays3 'E3', 'G3', 'C4', 0.5
+  sleep 1.5
+  
+  # bars 84-87 repeats 76-79
+  bar76to79_lh
+  
+  # bar 88
+  plays2 'F2', 'F3', 0.5
+  plays2 'D2', 'D3', 0.5
+  plays2 'E2', 'E3', 0.5
+  plays2 'F2', 'F3', 0.5
+  
+  plays2 'G2', 'G3', 0.5
+  plays3 'G3', 'C4', 'E4', 0.5
+  plays3 'Fs3', 'C4', 'Ds4', 0.5
+  plays3 'G3', 'C4', 'E4', 0.5
+  
+  plays2 'A2', 'A3', 0.5
+  plays2 'D2', 'D3', 0.5
+  plays2 'G2', 'G3', 0.5
+  plays2 'B2', 'B3', 0.5
+end
+
+define :sect6_rh do
+  define :bar76to79_rh do
+    # bar 76
+    plays2 'D4', 'F4', 0.5
+    plays2 'Cs4', 'E4', 0.25
+    plays2 'D4', 'F4', 0.5
+    plays2 'Cs4', 'E4', 0.25
+    plays2 'D4', 'F4', 0.5
+    
+    sleep 0.25
+    plays 'A4', 0.25
+    plays2 'F4', 'D5',  0.25
+    plays 'A4', 0.25
+    plays 'C5', 0.25
+    plays 'D5', 0.25
+    plays 'C5', 0.25
+    plays 'A4', 0.25
+    
+    # bar 78
+    plays2 'E4', 'G4', 0.5
+    plays2 'Ds4', 'Fs4', 0.25
+    plays2 'E4', 'G4', 0.5
+    plays2 'Ds4', 'Fs4', 0.25
+    plays2 'E4', 'G4', 0.5
+    
+    sleep 0.25
+    plays 'C5', 0.25
+    plays2 'G4', 'E5',  0.25
+    plays 'C5', 0.25
+    plays 'D5', 0.25
+    plays 'E5', 0.25
+    plays 'D5', 0.25
+    plays 'C5', 0.25
+    
+  end
+  
+  bar76to79_rh
+  
+  # bar 80
+  plays2 'B4', 'D5', 0.5
+  plays2 'As4', 'Cs5', 0.25
+  plays2 'B4', 'D5', 0.5
+  plays2 'As4', 'Cs5', 0.25
+  plays2 'B4', 'D5', 0.5
+  
+  sleep 0.25
+  plays 'F5', 0.25
+  plays2 'B4', 'A5',  0.25
+  plays 'F5', 0.25
+  plays 'G5', 0.25
+  plays 'A5', 0.25
+  plays 'G5', 0.25
+  plays 'F5', 0.25
+  
+  plays2 'C5', 'C6', 0.25
+  plays2 'C5', 'C6', 0.25
+  plays2 'C5', 'C6', 1
+  plays2 'C5', 'A5', 0.5
+  
+  # bar 83
+  plays2 'C5', 'G5', 0.5
+  plays2 'E4', 'G4', 0.25
+  plays2 'E4', 'G4', 0.25
+  plays2 'E4', 'G4', 0.5
+  plays2 'E4', 'G4', 0.5
+  
+  # bar 84-87 repeats 76-79
+  bar76to79_rh
+  
+  # bar 88
+  plays 'A4', 0.25
+  plays 'Gs4', 0.25
+  plays 'A4', 0.25
+  plays2 'A4', 'G5', 0.5
+  plays2 'A4', 'F5', 0.5
+  plays2 'A4', 'C5', 0.25
+  
+  plays2 'G4', 'E5', 0.25
+  plays 'Ds5', 0.25
+  plays 'E5', 0.25
+  plays 'A5', 0.5
+  plays 'C6', 0.25
+  plays 'G5', 0.25
+  plays 'E5', 0.25
+  
+  # bar 90
+  plays2 'Fs4', 'C5', 0.5
+  plays2 'Fs4', 'C5', 0.5
+  plays3 'F4', 'B4', 'E5',  0.25
+  plays3 'F4', 'B4', 'D5',  0.5
+end
+
+define :sect6 do
+  in_thread do
+    sect6_lh
+    # bar 91
+    plays2 'C3', 'C4', 0.5
+    sleep 1.5
+    
+    sect6_lh
+    # bar 92
+    plays2 'C2', 'C4', 0.5
+    plays2 'G2', 'G3', 0.5
+    plays2 'C2', 'C3', 1
+  end
+  in_thread do
+    sect6_rh
+    # bar 91 (and end of 90)
+    plays3 'E4', 'G4', 'C5',  0.75
+    
+    plays2 'E4', 'G4', 0.25
+    plays2 'E4', 'G4', 0.25
+    plays2 'E4', 'G4', 0.5
+    plays2 'E4', 'G4', 0.5
+    
+    sect6_rh
+    # bar 92 (and end of 90)
+    plays3 'E4', 'G4', 'C5',  1.25
+    plays4 'C5', 'E5', 'G5', 'C6',  0.5
+    sleep 0.5
+  end
+  sleep 64
+end
+
 #sect4
 #sect5
+#sect6
